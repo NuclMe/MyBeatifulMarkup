@@ -1,0 +1,14 @@
+.header__wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 48px 0 0 0;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.menu {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhlYWRlci5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxxQkFBYztFQUFkLGNBQWM7RUFDZCxvQkFBb0I7RUFDcEIsdUJBQW9CO01BQXBCLG9CQUFvQixFQUFFOztBQUV4QjtFQUNFLHFCQUFjO0VBQWQsY0FBYztFQUNkLFdBQVc7RUFDWCxVQUFVLEVBQUUiLCJmaWxlIjoiY29tcG9uZW50cy9oZWFkZXIuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhlYWRlcl9fd3JhcHBlciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIHBhZGRpbmc6IDQ4cHggMCAwIDA7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7IH1cblxuLm1lbnUge1xuICBkaXNwbGF5OiBmbGV4O1xuICBwYWRkaW5nOiAwO1xuICBtYXJnaW46IDA7IH1cbiJdfQ== */
