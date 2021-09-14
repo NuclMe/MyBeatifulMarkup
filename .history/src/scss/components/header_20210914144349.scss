@@ -1,0 +1,49 @@
+@import '../theme/variables';
+@import '../theme/mixins';
+@import '../theme/template';
+
+.header-wrapper {
+  display: flex;
+  padding: 20px 0 0 0;
+  @media screen and (min-width: 426px) {
+    padding: 38px 0 0 0;
+  }
+}
+.phone {
+  margin: 0 1em 0 0;
+  @extend %flex-align-element-center, %flex-shrink-0;
+}
+.phone-number {
+  color: $black;
+  display: none;
+  @media screen and (min-width: 426px) {
+    display: flex;
+  }
+}
+.logo {
+  margin: 0 1rem 0 0;
+  @extend %flex-shrink-1, %flex-justify-element-center;
+}
+.search {
+  margin: 0 1rem 0 0;
+  @extend %flex-align-element-center, %flex-shrink-0;
+}
+.logo__img {
+  display: block;
+  max-width: 200px;
+  @media screen and (min-width: 768px) {
+    max-width: 100%;
+  }
+}
+.search-input {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+.user-name {
+  display: none;
+  @media screen and (min-width: 426px) {
+    display: flex;
+  }
+}

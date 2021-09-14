@@ -1,0 +1,27 @@
+@import '../theme/variables';
+@import '../theme/mixins';
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 20px 0 0 0;
+  @media screen and (min-width: 426px) {
+    padding: 38px 0 0 0;
+  }
+}
+.phone {
+  margin: 0 1em 0 0;
+}
+.phone-number {
+  color: $black;
+  display: none;
+  @media screen and (min-width: 426px) {
+    display: flex;
+  }
+}
+.logo {
+  margin: 0 1rem 0 0;
+}
+.logo__img {
+  display: block;
+}

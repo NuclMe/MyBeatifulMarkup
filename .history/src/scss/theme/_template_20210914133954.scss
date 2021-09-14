@@ -1,0 +1,14 @@
+%flex-align-element-center {
+  display: flex;
+  align-items: center;
+}
+%flex-align-element-center
+%flex-shrink-0 {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+%flex-shrink-1 {
+  flex-shrink: 1;
+  flex-grow: 1;
+  min-width: 1px;
+}

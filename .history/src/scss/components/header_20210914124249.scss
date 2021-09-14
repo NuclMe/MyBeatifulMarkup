@@ -1,0 +1,17 @@
+@import '../theme/variables';
+@import '../theme/mixins';
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 20px 0 0 0;
+  @media screen and (min-width: 426px) {
+    padding: 38px 0 0 0;
+  }
+}
+.phone{
+
+}
+.phone-number{
+  col
+}

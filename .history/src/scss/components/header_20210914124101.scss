@@ -1,0 +1,8 @@
+@import '../theme/variables';
+@import '../theme/mixins';
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 38px 0 0 0;
+}
