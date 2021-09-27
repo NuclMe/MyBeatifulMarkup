@@ -1,0 +1,23 @@
+@import '../theme/variables';
+@import '../theme/mixins';
+@import '../theme/template';
+.description {
+  display: flex;
+  align-items: center;
+
+  &-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 17px;
+    margin: 0 50px 0 0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  &-text {
+    color: $grey3;
+  }
+  &-img {
+    width: 256px;
+    height: 170px;
+  }
+}

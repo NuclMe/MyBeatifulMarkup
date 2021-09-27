@@ -1,0 +1,264 @@
+@import 'components/header.scss';
+@import 'components/excursions.scss';
+@import 'components/searchtours.scss';
+@import 'components/slider.scss';
+@import 'components/thumbs.scss';
+@import 'components/weare.scss';
+@import 'components/reviews.scss';
+@import 'components/footer.scss';
+@import 'theme/variables';
+@import 'theme/fonts';
+@import 'theme/mixins';
+
+// @import url('http://fonts.cdnfonts.com/css/gilroy-bold');
+body,
+div,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+button,
+input,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+  vertical-align: bottom;
+}
+
+main {
+  display: block;
+  // margin: 20px 0 0 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a * {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+input,
+textarea {
+  outline: none;
+  resize: none;
+}
+
+html {
+  height: 100%;
+  min-width: 320px;
+  font-size: 14px;
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+body {
+  @include font($primary-font);
+  // font: $primary-font;
+  height: 101%;
+  min-width: 320px;
+  position: relative;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+input[type='text']::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type='text']::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: $grey2;
+  font-size: 16px;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: $grey2;
+  opacity: 1;
+  font-size: 16px;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: $grey2;
+  opacity: 1;
+  font-size: 16px;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: $grey2;
+  font-size: 16px;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+  font-size: 16px;
+}
+
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {
+  color: transparent;
+  font-size: 16px;
+}
+
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  color: transparent;
+  font-size: 16px;
+}
+
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+  color: transparent;
+  font-size: 16px;
+}
+
+input.placeholder,
+textarea.placeholder {
+  color: $grey2 !important;
+}
+
+.wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+  table-layout: fixed;
+  overflow: hidden;
+  position: relative;
+}
+li,
+ul {
+  list-style-type: none;
+}
+button {
+  border: none;
+  outline: none;
+}
+// including variables and mixins
+
+.container {
+  max-width: $container;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: center;
+  @media screen and (min-width: 425px) {
+    padding: 0 20px;
+  }
+  &__medium {
+    max-width: $contantContainer;
+    // padding: 0 20px;
+  }
+}
+.svg-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+.section {
+  margin: 20px 0 0 0;
+  &:nth-child(3) {
+    margin: 0;
+    background-color: $grey;
+    padding: 20px 0;
+    @media screen and (min-width: 425px) {
+      padding: 30px 0;
+    }
+    @media screen and (min-width: 768px) {
+      padding: 90px 0;
+    }
+  }
+  &:nth-child(6) {
+    // margin: 0;
+    background-color: $grey;
+    padding: 20px 0;
+    @media screen and (min-width: 425px) {
+      padding: 30px 0;
+    }
+    @media screen and (min-width: 768px) {
+      padding: 90px 0;
+    }
+  }
+  &:nth-child(4) {
+    position: relative;
+  }
+  // &:nth-child(5) {
+  //   padding: 20px 0;
+  // }
+  &:first-child {
+    margin: 0;
+  }
+  @media screen and (min-width: 426px) {
+    margin: 40px 0 0 0;
+  }
+  @media screen and (min-width: 768px) {
+    margin: 90px 0 0 0;
+  }
+}
+.title {
+  color: $menucolor;
+  font-size: 2.2rem;
+  margin: 0 0 20px 0;
+  text-align: center;
+  @media screen and (min-width: 426px) {
+    font-size: 3.2rem;
+    margin: 0 0 50px 0;
+  }
+  @include font($primary-font);
+}
+
+.test {
+  display: flex;
+  height: 100px;
+  width: 400px;
+  background-color: green;
+  align-items: center;
+}
+
+.btn {
+  @extend %btn;
+}

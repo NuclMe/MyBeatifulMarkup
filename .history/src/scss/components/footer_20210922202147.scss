@@ -1,0 +1,11 @@
+.footer {
+  padding: 65px 0;
+  background-image: url('../../images/footer.png');
+    background-position: center;
+  background-size: cover;
+  &__title {
+    text-align: center;
+    font-size: 24px;
+    color: #ffffff;
+  }
+}

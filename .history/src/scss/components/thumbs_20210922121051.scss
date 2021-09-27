@@ -1,0 +1,41 @@
+@import '../theme/variables';
+@import '../theme/mixins';
+@import '../theme/template';
+
+.daily {
+  text-align: center;
+
+  .title {
+    margin: 0 0 50px 0;
+  }
+}
+.thumbs {
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    @media screen and (min-width: 500px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px;
+    }
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 25px;
+    }
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 35px;
+    }
+  }
+}
+.thumb {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+
+  @media screen and (min-width: 1024px) {
+    &:hover {
+      box-shadow: 4px 4px 46px rgba(10, 34, 67, 0.07);
+    }
+  }
+}

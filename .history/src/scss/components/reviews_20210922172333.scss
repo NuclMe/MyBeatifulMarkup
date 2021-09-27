@@ -1,0 +1,79 @@
+@import '../theme/variables';
+@import '../theme/mixins';
+@import '../theme/template';
+
+.swiper {
+  &-slider {
+    &._reviews {
+      background: $white;
+      padding: 22px;
+      border-radius: 10px;
+      max-width: 500px;
+      box-shadow: 4px 4px 46px rgba(10, 34, 67, 0.07);
+    }
+  }
+}
+
+.user {
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-review {
+    border-radius: 50%;
+    margin: 0 20px 0 0;
+  }
+  &__name {
+    margin: 0 0 5px 0;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  &__quote {
+    margin: 20px 0 0 0;
+  }
+  &__link {
+    margin: 25px 0 0 0;
+    position: relative;
+    color: $grey4;
+    font-weight: 700;
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 100%;
+      width: 100%;
+      height: 1px;
+      background: $grey4;
+      transition: width 0.3s;
+    }
+    @media screen and (min-width: 1024px) {
+      &:hover {
+        &::after {
+          width: 0;
+        }
+      }
+    }
+  }
+}
+.city {
+  color: $titlegrey;
+  font-size: 13px;
+}
+
+.link {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.swiper {
+  &-buttons {
+    display: flex;
+    justify-content: center;
+    .swiper-button-next-arrow {
+      position: static;
+    }
+  }
+}
+.swiper-button-prev-arrow {
+  position: static;
+}

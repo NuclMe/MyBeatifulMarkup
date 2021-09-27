@@ -1,0 +1,51 @@
+@import '../theme/variables';
+@import '../theme/mixins';
+@import '../theme/template';
+.description {
+  display: flex;
+  flex-direction: column;
+  // display: grid;
+  // grid-auto-flow: column;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &-images {
+    display: flex;
+    flex-wrap: wrap;
+    // display: grid;
+    // grid-template-columns: repeat(1, 1fr);
+    // grid-gap: 17px;
+    // margin: -10px -10px 0 0;
+    margin: 0 50px 0 0;
+    align-self: center;
+
+    @media screen and (min-width: 768px) {
+      // margin: 0 50px 0 0;
+      // grid-template-columns: repeat(2, 1fr);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  }
+  &-text {
+    color: $grey3;
+    // margin: 0 0 0 50px;
+  }
+  &-img {
+    width: calc(50% - 10px);
+    margin: 10px 10px 0 0;
+    &:nth-child(1) {
+      border-radius: 10px 0 0 0;
+    }
+    &:nth-child(2) {
+      border-radius: 0 10px 0 0;
+    }
+    &:nth-child(3) {
+      border-radius: 0 0 0 10px;
+    }
+    &:nth-child(4) {
+      border-radius: 0 0 10px; 
+    }
+  }
+}

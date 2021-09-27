@@ -1,0 +1,21 @@
+.footer {
+  padding: 65px 0;
+  background-image: url('../../images/footer.png');
+  background-size: cover;
+
+  &__title {
+    text-align: center;
+    font-size: 24px;
+    color: #ffffff;
+  }
+}
+
+.form {
+  &__input {
+    width: 368px;
+    height: 52px;
+    border: none;
+    padding: 0 20px;
+    border-radius: 133px;
+  }
+}

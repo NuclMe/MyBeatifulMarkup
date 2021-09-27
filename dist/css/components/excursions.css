@@ -1,7 +1,33 @@
-@import url("http://fonts.cdnfonts.com/css/gilroy-bold");
 /*--------------------------- Color variations ----------------------*/
+/*--------------------------- Color variations ----------------------*/
+.inner__title, .inner__text {
+  color: #fff; }
+
 .background-container {
   background: url("../../images/mountains-bg.png") no-repeat;
-  background-size: auto auto; }
+  background-size: cover;
+  background-position: top; }
 
-/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImV4Y3Vyc2lvbnMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLHlEQUF5RDtBQUN6RCx1RUFBdUU7QUFDdkU7RUFDRSwyREFBMkQ7RUFDM0QsMkJBQTJCLEVBQUUiLCJmaWxlIjoiY29tcG9uZW50cy9leGN1cnNpb25zLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgdXJsKFwiaHR0cDovL2ZvbnRzLmNkbmZvbnRzLmNvbS9jc3MvZ2lscm95LWJvbGRcIik7XG4vKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSBDb2xvciB2YXJpYXRpb25zIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuLmJhY2tncm91bmQtY29udGFpbmVyIHtcbiAgYmFja2dyb3VuZDogdXJsKFwiLi4vLi4vaW1hZ2VzL21vdW50YWlucy1iZy5wbmdcIikgbm8tcmVwZWF0O1xuICBiYWNrZ3JvdW5kLXNpemU6IGF1dG8gYXV0bzsgfVxuIl19 */
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+  text-align: center; }
+  @media screen and (min-width: 768px) {
+    .inner {
+      padding: 17.5rem 1.5rem; } }
+  .inner__title {
+    font-size: 3.5rem;
+    font-family: "Gilroy"; }
+    @media screen and (min-width: 768px) {
+      .inner__title {
+        font-size: 6.5rem; } }
+  .inner__text {
+    font-size: 0.9rem;
+    margin: 1rem 0 0 0; }
+    @media screen and (min-width: 768px) {
+      .inner__text {
+        font-size: 1rem;
+        margin: 1.8rem 0 0 0; } }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImV4Y3Vyc2lvbnMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLHVFQUF1RTtBQUN2RSx1RUFBdUU7QUFDdkU7RUFDRSxZQUFZLEVBQUU7O0FBRWhCO0VBQ0UsMkRBQTJEO0VBQzNELHVCQUF1QjtFQUN2Qix5QkFBeUIsRUFBRTs7QUFFN0I7RUFDRSxrQkFBa0I7RUFDbEIsZUFBZTtFQUNmLHFCQUFxQjtFQUNyQixtQkFBbUIsRUFBRTtFQUNyQjtJQUNFO01BQ0Usd0JBQXdCLEVBQUUsRUFBRTtFQUNoQztJQUNFLGtCQUFrQjtJQUNsQixzQkFBc0IsRUFBRTtJQUN4QjtNQUNFO1FBQ0Usa0JBQWtCLEVBQUUsRUFBRTtFQUM1QjtJQUNFLGtCQUFrQjtJQUNsQixtQkFBbUIsRUFBRTtJQUNyQjtNQUNFO1FBQ0UsZ0JBQWdCO1FBQ2hCLHFCQUFxQixFQUFFLEVBQUUiLCJmaWxlIjoiY29tcG9uZW50cy9leGN1cnNpb25zLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIENvbG9yIHZhcmlhdGlvbnMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG4vKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSBDb2xvciB2YXJpYXRpb25zIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuLmlubmVyX190aXRsZSwgLmlubmVyX190ZXh0IHtcbiAgY29sb3I6ICNmZmY7IH1cblxuLmJhY2tncm91bmQtY29udGFpbmVyIHtcbiAgYmFja2dyb3VuZDogdXJsKFwiLi4vLi4vaW1hZ2VzL21vdW50YWlucy1iZy5wbmdcIikgbm8tcmVwZWF0O1xuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiB0b3A7IH1cblxuLmlubmVyIHtcbiAgbWF4LXdpZHRoOiAxNDAwcHg7XG4gIG1hcmdpbjogMCBhdXRvO1xuICBwYWRkaW5nOiAyLjVyZW0gMXJlbTtcbiAgdGV4dC1hbGlnbjogY2VudGVyOyB9XG4gIEBtZWRpYSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDc2OHB4KSB7XG4gICAgLmlubmVyIHtcbiAgICAgIHBhZGRpbmc6IDE3LjVyZW0gMS41cmVtOyB9IH1cbiAgLmlubmVyX190aXRsZSB7XG4gICAgZm9udC1zaXplOiAzLjVyZW07XG4gICAgZm9udC1mYW1pbHk6IFwiR2lscm95XCI7IH1cbiAgICBAbWVkaWEgc2NyZWVuIGFuZCAobWluLXdpZHRoOiA3NjhweCkge1xuICAgICAgLmlubmVyX190aXRsZSB7XG4gICAgICAgIGZvbnQtc2l6ZTogNi41cmVtOyB9IH1cbiAgLmlubmVyX190ZXh0IHtcbiAgICBmb250LXNpemU6IDAuOXJlbTtcbiAgICBtYXJnaW46IDFyZW0gMCAwIDA7IH1cbiAgICBAbWVkaWEgc2NyZWVuIGFuZCAobWluLXdpZHRoOiA3NjhweCkge1xuICAgICAgLmlubmVyX190ZXh0IHtcbiAgICAgICAgZm9udC1zaXplOiAxcmVtO1xuICAgICAgICBtYXJnaW46IDEuOHJlbSAwIDAgMDsgfSB9XG4iXX0= */

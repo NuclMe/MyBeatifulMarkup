@@ -1,0 +1,15 @@
+@mixin font($property) {
+  font-family: $property;
+}
+@mixin fontFace($name, $file, $weight: normal, $style: normal, $display: swap) {
+  $fontsDir: '../../fonts';
+  background-image: url('../../');
+  @font-face {
+    font-family: '#{$name}';
+    src: url('#{$fontsDir}/#{$name}/#{$file}.woff2') format('woff2'),
+      url('#{$fontsDir}/#{$name}/#{$file}.woff') format('woff');
+    font-weight: $weight;
+    font-style: $style;
+    font-display: $display;
+  }
+}

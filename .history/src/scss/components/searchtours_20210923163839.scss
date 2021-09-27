@@ -1,0 +1,124 @@
+@import '../theme/variables';
+@import '../theme/mixins';
+@import '../theme/template';
+
+.tours {
+  &-mountain {
+    &-img {
+      width: 100%;
+      margin: 50px 0 0 0;
+    }
+  }
+}
+
+.select {
+  margin: 0 0 18px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 426px) {
+    margin: 0 18px 10px 0;
+  }
+  // @media screen and (min-width: 768px) {
+  //   width: 230px;
+  // }
+  @media screen and (min-width: 1300px) {
+    margin: 0 18px 0 0;
+    // width: 270px;
+    // height: 52px;
+  }
+  // &:last-child {
+  //   margin: 0;
+  // }
+  // position: relative;
+  // width: 272px;
+  &-wrapper {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(1, 0fr);
+
+    @media screen and (min-width: 426px) {
+      grid-template-columns: repeat(2, 0fr);
+    }
+    @media screen and (min-width: 1300px) {
+      grid-template-columns: repeat(4, 0fr);
+    }
+  }
+  &__header {
+    background-color: $grey;
+    border-radius: 20px;
+    margin: 0.8rem 0 0 0;
+    cursor: pointer;
+    display: flex;
+    width: 270px;
+  }
+  &-title {
+    color: $titlegrey;
+    text-align: left;
+  }
+  &__current {
+    color: $grey2;
+    padding: 16px 14px;
+  }
+  &__icon {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    margin-left: auto;
+    text-align: center;
+    width: 40px;
+  }
+  &__body {
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    margin: 12px 0 0 0;
+    width: 270px;
+    height: 52px;
+    padding: 0 3em 0 1em;
+    background: url('../../images/select-arrow.svg') no-repeat right 0.8em center/1.4em;
+    color: $grey2;
+    border-radius: 33px;
+    background-size: 15px 10px;
+    cursor: pointer;
+    background-color: $grey;
+    @media screen and (min-width: 426px) {
+      width: 180px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 230px;
+    }
+    @media screen and (min-width: 1300px) {
+      width: 270px;
+    }
+  }
+  &__item {
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px;
+    @media screen and (min-width: 1024px) {
+      &:hover {
+        background-color: #f2f2f2;
+      }
+    }
+  }
+  &.is-active {
+    .select {
+      &__body {
+        display: block;
+      }
+      &__header {
+        border-radius: 20px 20px 0 0;
+      }
+    }
+    .svg-icon {
+      transform: rotate(180deg);
+    }
+  }
+}
+// .select.is-active .select__body {
+//   display: block;
+// }

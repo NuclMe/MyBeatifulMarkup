@@ -1,0 +1,32 @@
+@import '../theme/variables';
+@import '../theme/mixins';
+@import '../theme/template';
+
+.swiper {
+  &-slider {
+    &._reviews {
+      background: $white;
+      padding: 22px;
+      border-radius: 10px;
+    }
+  }
+}
+
+.user {
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-review {
+    border-radius: 50%;
+    margin: 0 20px 0 0;
+  }
+  &__name {
+    margin: 0 0 5px 0;
+    font-weight: 700;
+    font-size: 18px;
+  }
+}
+.city {
+  color: $titlegrey;
+}

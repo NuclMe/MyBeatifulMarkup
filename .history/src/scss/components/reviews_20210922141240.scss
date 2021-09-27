@@ -1,0 +1,13 @@
+@import '../theme/variables';
+@import '../theme/mixins';
+@import '../theme/template';
+
+.swiper {
+  &-slider {
+    &._reviews {
+      background: $white;
+      padding: 10px;
+      border-radius: 22px;
+    }
+  }
+}

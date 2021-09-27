@@ -1,0 +1,44 @@
+@import '../theme/variables';
+
+.footer {
+  padding: 65px 0;
+  background-image: url('../../images/footer.png');
+  background-size: cover;
+
+  &__title {
+    text-align: center;
+    font-size: 24px;
+    color: #ffffff;
+  }
+}
+
+.form {
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: flex-end;
+
+  &__text {
+    color: $c-gray;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+
+  &__input {
+    width: 368px;
+    height: 52px;
+    border: none;
+    padding: 0 20px;
+    border-radius: 30px;
+  }
+}
+
+.btn {
+  &-footer {
+    margin-left: 18px;
+    padding: 18px 65px;
+    background-color: $redColor;
+    border-radius: 30px;
+    color: $white;
+  }
+}
