@@ -57,10 +57,10 @@ function clickFunction(index, item) {
 // close dropdown onclick on body
 function addClickEventOnBody(e) {
   const target = e.target
-  if (target != currentSelect || target != selectItem) {
-    currentSelect.parentElement.classList.remove('is-active')
+  if (target === currentSelect || target === selectItem) {
+    console.log('ты баран')
   } else {
-    alert('error 63 line')
+    currentSelect.parentElement.classList.remove('is-active')
   }
 }
 // close dropdown onClick on options__item and handling item value inside select
@@ -81,6 +81,7 @@ function closeFunction(index, e, option) {
 
   optionParent.value = optionAttribute
   // let strUser = optionParent.options[optionParent.selectedIndex].value
+  // currentOption.parentElement.classList.remove('is-active')
 }
 
 // ---------------------------END block of code which emplements open and closing seacrh dropdowns onClick-------------------------------

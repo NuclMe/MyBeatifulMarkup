@@ -34,8 +34,8 @@ document.querySelectorAll('.options__item').forEach((option, index) => {
 })
 // open dropdown on click
 function clickFunction(index, item) {
-  // debugger
   currentSelect = document.getElementsByClassName('select__header')[index]
+  debugger
   let selectParent = currentSelect.parentElement
 
   // selectParent.classList.add('is-active')
@@ -44,6 +44,7 @@ function clickFunction(index, item) {
   } else {
     selectParent.classList.add('is-active')
   }
+  console.log(selectParent)
   // currentSelect.parentElement.addEventListener('click', function () {
   //   if (currentSelect.parentElement.classList.contains('is-active')) {
   //     currentSelect.parentElement.classList.remove('is-active')
@@ -57,10 +58,9 @@ function clickFunction(index, item) {
 // close dropdown onclick on body
 function addClickEventOnBody(e) {
   const target = e.target
-  if (target != currentSelect || target != selectItem) {
-    currentSelect.parentElement.classList.remove('is-active')
-  } else {
-    alert('error 63 line')
+  if (target !== currentSelect || target !== selectItem) {
+    
+    // currentSelect.parentElement.classList.remove('is-active')
   }
 }
 // close dropdown onClick on options__item and handling item value inside select
@@ -81,6 +81,7 @@ function closeFunction(index, e, option) {
 
   optionParent.value = optionAttribute
   // let strUser = optionParent.options[optionParent.selectedIndex].value
+  // currentOption.parentElement.classList.remove('is-active')
 }
 
 // ---------------------------END block of code which emplements open and closing seacrh dropdowns onClick-------------------------------

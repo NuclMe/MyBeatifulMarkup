@@ -57,10 +57,11 @@ function clickFunction(index, item) {
 // close dropdown onclick on body
 function addClickEventOnBody(e) {
   const target = e.target
-  if (target != currentSelect || target != selectItem) {
-    currentSelect.parentElement.classList.remove('is-active')
+  if (target === currentSelect || target === selectItem) {
+    console.log('ты баран')
   } else {
-    alert('error 63 line')
+    currentSelect.parentElement.classList.remove('is-active')
+ 
   }
 }
 // close dropdown onClick on options__item and handling item value inside select

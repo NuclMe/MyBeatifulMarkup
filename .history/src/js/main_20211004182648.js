@@ -60,7 +60,7 @@ function addClickEventOnBody(e) {
   if (target != currentSelect || target != selectItem) {
     currentSelect.parentElement.classList.remove('is-active')
   } else {
-    alert('error 63 line')
+    alert()
   }
 }
 // close dropdown onClick on options__item and handling item value inside select
