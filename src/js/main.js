@@ -25,17 +25,28 @@ let currentOption = ''
 let selectItem = document.querySelectorAll('.options__item')
 
 document.querySelectorAll('.select__header').forEach((item, index) => {
-  item.addEventListener('click', () => clickFunction(index))
+  item.addEventListener('click', () => clickFunction(index, item))
 })
 document.querySelectorAll('.options__item').forEach((option, index) => {
   option.addEventListener('click', (e) => {
-    closeFunction(index, e)
+    closeFunction(index, e, option)
   })
 })
 // open dropdown on click
-function clickFunction(index) {
+function clickFunction(index, item) {
   currentSelect = document.getElementsByClassName('select__header')[index]
-  currentSelect.parentElement.classList.toggle('is-active')
+  let selectParent = currentSelect.parentElement
+  selectParent.addEventListener('click', () => {
+    selectParent.classList.toggle('is-active')
+  })
+
+  // currentSelect.parentElement.addEventListener('click', function () {
+  //   if (currentSelect.parentElement.classList.contains('is-active')) {
+  //     currentSelect.parentElement.classList.remove('is-active')
+  //   } else {
+  //     currentSelect.parentElement.classList.add('is-active')
+  //   }
+  // })
 
   document.body.addEventListener('click', addClickEventOnBody, true)
 }
@@ -43,11 +54,16 @@ function clickFunction(index) {
 function addClickEventOnBody(e) {
   const target = e.target
   if (target !== currentSelect || target !== selectItem) {
+    // console.log(currentSelect)
     currentSelect.parentElement.classList.remove('is-active')
   }
 }
 // close dropdown onClick on options__item and handling item value inside select
-function closeFunction(index, e) {
+function closeFunction(index, e, option) {
+  // get select tag
+  let optionParent = option.parentElement.previousElementSibling
+  // get data-atributes of option
+  let optionAttribute = option.getAttribute('data-value')
   //  get selected option
   let currentOption = document.getElementsByClassName('options__item')[index]
   // get current select header
@@ -56,8 +72,11 @@ function closeFunction(index, e) {
   let text = currentOption.innerText
   // push text of current option into select header
   selectValue.innerText = text
-  // select value equal to valuo of clicked option. Now we can send this data inside tag form
-  selectValue.value = e.target.value
+  // set select value equal to a data-value of clicked option.
+
+  optionParent.value = optionAttribute
+  // let strUser = optionParent.options[optionParent.selectedIndex].value
+  currentOption.parentElement.classList.remove('is-active')
 }
 
 // ---------------------------END block of code which emplements open and closing seacrh dropdowns onClick-------------------------------
@@ -92,7 +111,6 @@ const swiper = new Swiper('.swiper', {
 // initialization of second slider
 const secondswiper = new Swiper('.second', {
   slidesPerView: 1,
-
   dots: 'true',
   navigation: {
     nextEl: '.swiper-button-next-arrow',
