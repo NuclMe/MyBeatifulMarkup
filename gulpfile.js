@@ -37,23 +37,20 @@ const isDebug = process.env.NODE_ENV !== 'production'
 // HTML task
 const html = function () {
   const options = {
-    ignorePartials: true,
+    ignorePartials: false,
     batch: [paths.src + paths.components],
     helpers: {
-      capitals: function (str) {
-        return str.toUpperCase()
+      asset: function (filePath) {
+        return filePath.replace('../../', '') // Убираем лишние "../"
       },
     },
   }
+
   return gulp
-    .src(paths.src + '/*.{html,hbs,handlebars}')
+    .src(paths.src + '/*.html')
     .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
     .pipe(handlebars({}, options))
-    .pipe(
-      rename((path) => {
-        path.extname = '.html'
-      }),
-    )
+    .pipe(rename({ extname: '.html' }))
     .pipe(gulp.dest(paths.dest))
     .pipe(browserSync.stream())
 }
