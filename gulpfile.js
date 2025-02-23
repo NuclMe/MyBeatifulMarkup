@@ -22,7 +22,7 @@ const { series, parallel } = gulp
 
 const paths = {
   src: './src',
-  dest: './dist',
+  dest: './docs',
   scss: '/scss',
   css: '/css',
   less: '/less',
